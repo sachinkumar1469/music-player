@@ -1,0 +1,200 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #01012e;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 1% 7%;
+    font-size: 1.4rem;
+    /* border: 1px solid red; ----------------------------*/
+}
+#navLeft{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#websiteLogo{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+#websiteLogo > img{
+    width: 25%;
+}
+#navLeft > h3{
+    font-size: 1.2rem;
+}
+
+#navRight{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#inputBox {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: space-between;
+    padding: 1.5%;
+    background-color: #14146dd1;
+}
+#inputBox > input{
+    width: 75%;
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    outline: none;
+    color: white;
+}
+
+
+section{
+    width: 100%;
+    height: 84vh;
+    /* border: 1px solid red;  ------------------------------*/
+    display: flex;
+    padding: 0px 8%;
+    
+    
+}
+section > main{
+    width: 75%;
+    height: 100%;
+    /* border: 1px solid yellow; */
+    overflow:auto;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+section > main::-webkit-scrollbar{
+    width: 0px;
+}
+section > aside{
+    width: 25%;
+    height: 100%;
+    /* border: 1px solid yellowgreen; */
+    overflow: auto;
+    padding-top: 2%;
+}
+section > aside::-webkit-scrollbar{
+    width: 0px;
+}
+#card{
+    width: 100%;
+    height: 40%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+.cards{
+    height: 100%;
+    width: 30%;
+    
+    /* border: 2px solid yellow; */
+}
+.cards > a{
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    width: 100%;
+    
+}
+.cards > a > img{
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease;
+}
+.cards > a > img:hover{
+    transform: scale(1.1);
+}
+
+#latestRelase{
+    width: 100%;
+    height: auto;
+    /* border: 2px solid red; */
+    margin-top: 4%;
+    color: white;
+    
+}
+#latestRelase > h3 {
+    margin-bottom: 0.7%;
+}
+
+#LRSongsContainer{
+    width: 100%;
+    height: auto;
+    /* border: 2px solid yellow; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 4%;
+    grid-row-gap: 8%;
+    
+}
+.latestRelaseSongs{
+    /* border: 1px solid green; */
+    display: grid;
+    grid-template-columns: 0.8fr 2.5fr 0.5fr ;
+    grid-column-gap: 5% ;
+}
+.lRSChild{
+    /* border: 1px solid brown; */
+}
+.latestRelaseSongs > img{
+    width: 100%;
+}
+.songDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.songDetails > h3{
+    font-size: 0.9rem;
+}
+.latestRelaseSongs  h4{
+    font-size: 0.6rem;
+    color: #ffffff73;
+    margin-top: 2%;
+}
+.dotMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20%;
+}
+.dotMenu > a{
+    width: 100%;
+    /* background-color: yellow; */
+    
+}
+.dotContainer{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+}
+.dotItems{
+    width: 0px;
+    height: 0px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: 5%;
+}
+.dotMenu > h4{
+    margin-top: 40%;
+}
