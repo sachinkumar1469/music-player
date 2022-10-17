@@ -12,7 +12,7 @@ nav{
     color: white;
     padding: 1% 7%;
     font-size: 1.4rem;
-    /* border: 1px solid red; ----------------------------*/
+    border: 1px solid red;
 }
 #navLeft{
     width: 40%;
@@ -62,7 +62,7 @@ nav{
 section{
     width: 100%;
     height: 84vh;
-    /* border: 1px solid red;  ------------------------------*/
+    border: 1px solid red;
     display: flex;
     padding: 0px 8%;
     
@@ -71,7 +71,7 @@ section{
 section > main{
     width: 75%;
     height: 100%;
-    /* border: 1px solid yellow; */
+    border: 1px solid yellow;
     overflow:auto;
     padding-top: 2%;
     padding-left: 2%;
@@ -83,7 +83,7 @@ section > main::-webkit-scrollbar{
 section > aside{
     width: 25%;
     height: 100%;
-    /* border: 1px solid yellowgreen; */
+    border: 1px solid yellowgreen;
     overflow: auto;
     padding-top: 2%;
 }
@@ -102,8 +102,10 @@ section > aside::-webkit-scrollbar{
 .cards{
     height: 100%;
     width: 30%;
-    
+    transition: all 1s ease;
+    position: relative;
     /* border: 2px solid yellow; */
+    
 }
 .cards > a{
     text-decoration: none;
@@ -115,10 +117,36 @@ section > aside::-webkit-scrollbar{
 .cards > a > img{
     width: 100%;
     height: 100%;
+    
+}
+.cards:hover{
+    transform: scale(1.1);
+    
+
+}
+.hoverInfo > a{
+    text-decoration: none;
+    color: black;
+}
+.hoverInfo{
+    display: inline-block;
+    position: absolute;
+    left: 10%;
+    bottom: 15%;
+    background-color: #fffafabd;
+    color: black !important;
+    width: 80%;
+    
+    /* border: 2px solid yellow; */
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    box-shadow: 5px 10px 10px grey;
+    opacity: 0;
     transition: all 1s ease;
 }
-.cards > a > img:hover{
-    transform: scale(1.1);
+.cards:hover .hoverInfo{
+    opacity: 1;
 }
 
 #latestRelase{
@@ -197,4 +225,92 @@ section > aside::-webkit-scrollbar{
 }
 .dotMenu > h4{
     margin-top: 40%;
+}
+
+#popularArtists{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid red; */
+    margin-top: 40px;
+    color: white;
+}
+#popularArtists > h3 {
+    margin-bottom: 1%;
+}
+
+#artistWrapper{
+    display: flex;
+    width: 100%;
+    /* border: 1px solid yellow; */
+    justify-content: space-between;
+}
+.artist{
+    width: 17%;
+    /* border: 1px solid brown; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.artist >a{
+    width: 90%;
+}
+.artist > a>img{
+    width: 100%;
+    display: inline-block;
+    border-radius: 50%;
+}
+.artist > h3{
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+#stationsWrapper{
+    width: 100%;
+    height: auto;
+    /* border: 2px solid red; */
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+#station{
+    width: 16%;
+    height: 100%;
+    /* border: 1px solid yellow; */
+    padding: 2%;
+}
+#station > img{
+    width: 100%;
+}
+#songTypes{
+    width: 84%;
+    height: 100%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-between;
+    
+}
+.songType{
+    width: 13%;
+    /* border: 1px solid brown; */
+    position: relative;
+}
+.songType > h4{
+    position: absolute;
+    color: #ffffffd1;
+    top: 34px;
+    left: 20px;
+    cursor: pointer;
+}
+.songType > a{
+    width: 100%;
+    /* border: 1px solid greenyellow; */
+    text-decoration: none;
+    
+}
+
+.songType > a > img{
+    width: 100%;
+    border-radius:50% ;
+    opacity: 0.5;
 }
