@@ -1,0 +1,145 @@
+.singerPoster{
+    width: 100%;
+    height: 50vh;
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-column-gap:10px ;
+    align-items: center;
+    background-color: #0b0b3b;
+}
+.singerImage{
+    height: 100%;
+    /* border: 2px solid green; */
+    position: relative;
+
+}
+.singerImage .addShadow{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid salmon; */
+    box-shadow: ;
+    background-color: #0000006b;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    box-shadow: 4px -30px 30px #0b0b3b inset;
+}
+.singerInfo{
+    height: 90%;
+    /* border: 2px solid red; */
+    color: white;
+    padding: 30px 10px;
+    padding-right: 20px;
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    font-family: 'Montserrat', sans-serif;
+}
+.singerImage > img{
+    width: 100%;
+    height: 100%; 
+}
+.singerInfo > h2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.singerInfo > h2 > span {
+    font-size: 0.8rem;
+    color:gainsboro;
+}
+.singerInfo .discriptionHeading{
+    font-size: 0.9rem;
+    color: gainsboro;
+    margin: 08px 0px;
+}
+.singerInfo > p{
+    margin-bottom: 8px;
+    font-size: 0.7rem;
+    color: gainsboro;
+}
+.singerInfo .singerButtons{
+    margin-top: 1rem;
+}
+.singerInfo .singerButtons > a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    padding: 5px 10px;
+}
+.singerInfo .singerButtons .playBtn,.followBtn{
+    /* border: 1px solid white; */
+    font-size: 0.9rem;
+    background-image:linear-gradient(to right, #29138b, #470d9d, #5f00a7, #65118a, #b011d2);
+    margin-right: 8px;
+    
+}
+.singerInfo .noOfTracks{
+    margin-top: 5px;
+    font-size: 0.7rem;
+    color: gainsboro;
+}
+.singerSongList{
+    /* border: 1px solid green; */
+}
+.singerSongListItem{
+    /* border: 1px solid white; */
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.5fr 9fr 2fr;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #0c0c2b;
+    
+}
+.singerSongList .singerSongListItem .queueSongCount{
+    /* border: 1px solid green; */
+    color: gainsboro;
+    font-size: 0.85rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.singerSongList .singerSongListItem .queueSongImage{
+    /* border: 1px solid salmon; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* padding: 10%; */
+    /* background-color: white; */
+    
+}
+.singerSongList .singerSongListItem .queueSongImage > img{
+    width: 80%;
+    height: 80%;
+}
+.singerSongList .singerSongListItem .queueSongDetails{
+    /* border: 1px solid red; */
+    height: 100%;
+}
+.singerSongList .singerSongListItem .queueSongHeart{
+    /* border: 1px solid yellow; */
+    height: 100%;
+}
+.singerSongList .singerSongListItem .queueSongDetails{
+    padding-left: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.singerSongList .singerSongListItem .queueSongDetails > div{
+    color: gainsboro;
+    font-size: 0.8rem;
+}
+.singerSongList .singerSongListItem .queueSongHeart{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
