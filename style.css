@@ -12,7 +12,7 @@ nav{
     color: white;
     padding: 1% 7%;
     font-size: 1.4rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 #navLeft{
     width: 40%;
@@ -62,7 +62,7 @@ nav{
 section{
     width: 100%;
     height: 84vh;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     padding: 0px 8%;
     
@@ -71,7 +71,7 @@ section{
 section > main{
     width: 75%;
     height: 100%;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     overflow:auto;
     padding-top: 2%;
     padding-left: 2%;
@@ -80,16 +80,7 @@ section > main{
 section > main::-webkit-scrollbar{
     width: 0px;
 }
-section > aside{
-    width: 25%;
-    height: 100%;
-    border: 1px solid yellowgreen;
-    overflow: auto;
-    padding-top: 2%;
-}
-section > aside::-webkit-scrollbar{
-    width: 0px;
-}
+
 #card{
     width: 100%;
     height: 40%;
@@ -272,6 +263,7 @@ section > aside::-webkit-scrollbar{
     display: flex;
     margin-top: 20px;
     align-items: center;
+    background-color: #020248;
 }
 #station{
     width: 16%;
@@ -288,6 +280,7 @@ section > aside::-webkit-scrollbar{
     /* border: 1px solid yellow; */
     display: flex;
     justify-content: space-between;
+    padding-right: 2%;
     
 }
 .songType{
@@ -313,4 +306,168 @@ section > aside::-webkit-scrollbar{
     width: 100%;
     border-radius:50% ;
     opacity: 0.5;
+}
+#typesOfMusic{
+    width: 100%;
+    /* border: 2px solid red; */
+    height: 160px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.typesCard{
+    width: 32%;
+    height: 100%;
+    /* border: 2px solid yellow; */
+}
+.typesCard > a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid green; */
+    position: relative;
+    /* overflow: hidden; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.typesCard #firstTypesCard{
+    background-image: url("./images/cover_image/party.jpg");
+}
+.typesCard #secondTypesCard{
+    background-image: url("./images/cover_image/electronic.jpg");
+}
+.typesCard #thirdTypesCard{
+    background-image: url("./images/cover_image/roadtrip.jpg");
+}
+.bg-Image-Blur{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #6e6b6bad;
+    backdrop-filter: blur(-6px);
+    z-index: 1;
+}
+.typesCard > a > h4{
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    font-size: 1.2rem;
+    font-weight: 700;
+    top: 43%;
+    /* color: black; */
+    text-align: center;
+    
+}
+
+section > aside{
+    width: 25%;
+    height: 100%;
+    /* border: 1px solid yellowgreen; */
+    overflow: auto;
+    padding-top: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+section > aside::-webkit-scrollbar{
+    width: 0px;
+}
+#queueAside{
+    color:white;
+    overflow: auto;
+}
+#queueAside #queueHeading{
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* border: 2px solid yellow; */
+}
+#queueDropDown{
+    position: relative;
+    /* border: 1px solid red; */
+    /* font-size: 1rem; */
+}
+#queueDropDown  #select{
+    text-decoration: none;
+    color: gainsboro;
+    /* background-color: yellowreen; */
+}
+
+
+#queueDropDownList{
+    display: block;
+    position: absolute;
+    top: 23px;
+    right: 2px;
+    z-index: 2;
+    overflow: hidden;
+    height: 0px;
+    transition: all 0.2s ease-in-out;
+}
+#queueDropDownList:target{
+    height: 41.33px;
+}
+
+#queueDropDownList > ul{
+    list-style: none;
+}
+#queueDropDownList a{
+    text-decoration: none;
+    display: block;
+    /* background-color: black; */
+    color: gainsboro;
+    text-align: right;
+}
+
+aside .queueSongs{
+    width: 100%;
+    height: 83%;
+    /* border: 1px solid yellow; */
+    margin-top: 45px;
+    overflow: auto;
+}
+aside .queueSongs::-webkit-scrollbar{
+    width: 0px;
+}
+aside .queueSongs .songItems{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr 1fr;
+    align-items: center;
+    /* border: 1px solid whitesmoke; */
+    margin-bottom: 8px;
+    
+}
+aside .queueSongs .songItems .queueSongCount{
+    /* border: 1px solid green; */
+    color: gainsboro;
+    font-size: 0.85rem;
+}
+aside .queueSongs .songItems .queueSongImage{
+    /* border: 1px solid salmon; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: white; */
+    
+}
+aside .queueSongs .songItems .queueSongImage > img{
+    width: 75%;
+    box-shadow: 0px 0px 10px gray;
+}
+
+aside .queueSongs .songItems .queueSongDetails{
+    /* border: 1px solid cornsilk; */
+    padding-left: 5px;
+}
+
+aside .queueSongs .songItems .queueSongHeart{
+    /* border: 1px solid burlywood; */
+    justify-self: end;
+    color: gainsboro;
+
 }
