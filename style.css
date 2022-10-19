@@ -581,8 +581,69 @@ aside .queueSongs .songItems .queueSongHeart{
 
 .masterPlay .seekMenu{
     color: white;
-    width: 210px;
+    width: 410px;
     border: 1px solid white;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+.masterPlay .seekMenu #startTime{
+    width: 10%;
+}
+.masterPlay .seekMenu #endTime{
+    width: 10%;
+}
+.masterPlay .seekMenu #seekBar{
+    width: 80%;
+    border: 1px solid yellow;
+    padding: 4px 5% 4px 5%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.masterPlay .seekMenu #seekBar #seek{
+    width: 100%;
+    opacity: -1;
+    z-index: 5;
+}
+
+.masterPlay .seekMenu #seekBar #backgroundBarLine{
+    position: absolute;
+    height: 4px;
+    width: 87%;
+    background: rgb(105, 105, 170,0.4);
+
+}
+.masterPlay .seekMenu #seekBar #backgroundBarLine #seekBarLine{
+    position: relative;
+    border: 2px solid cyan;
+    
+    width: 0%;
+    
+}
+
+
+
+.masterPlay .seekMenu #seekBar #backgroundBarLine #seekBarDot{
+    position: relative;
+    left: 0%;
+    top: -4.5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: cyan;
+    border: 2px solid cyan;
+    
+
+}
+
+.masterPlay .seekMenu #seekBar #backgroundBarLine #seekBarDot::before{
+    content: '';
+    position: absolute;
+    left:-6.5px;
+    top: -7px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid cyan;
 }

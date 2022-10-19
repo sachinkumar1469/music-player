@@ -213,3 +213,20 @@ music.addEventListener("timeupdate",()=>{
     startTime.textContent=`${min}:${sec}`;
 })
 
+
+let seek = document.getElementById('seek');
+seek.addEventListener('click',()=>{
+    console.log(seek.value);
+})
+
+let seekBarLine = document.getElementById('seekBarLine');
+let seekBarDot = document.getElementById('seekBarDot');
+
+music.addEventListener('timeupdate',()=>{
+    let musicLength = music.duration;
+    let currLength = music.currentTime;
+    let currPercentage = parseInt(currLength/musicLength*100);
+    seekBarLine.style.width=`${currPercentage}%`;
+    seekBarDot.style.left=`${currPercentage}%`;
+})
+
