@@ -65,17 +65,19 @@ section{
     /* border: 1px solid red; */
     display: flex;
     padding: 0px 8%;
-    
+    flex-wrap: wrap;
+    position: relative;
     
 }
 section > main{
     width: 75%;
-    height: 100%;
+    height: 90%;
     /* border: 1px solid yellow; */
     overflow:auto;
     padding-top: 2%;
     padding-left: 2%;
     padding-right: 2%;
+    position: relative;
 }
 section > main::-webkit-scrollbar{
     width: 0px;
@@ -365,7 +367,7 @@ section > main::-webkit-scrollbar{
 
 section > aside{
     width: 25%;
-    height: 100%;
+    height: 90%;
     /* border: 1px solid yellowgreen; */
     overflow: auto;
     padding-top: 2%;
@@ -440,6 +442,8 @@ aside .queueSongs .songItems{
     align-items: center;
     /* border: 1px solid whitesmoke; */
     margin-bottom: 8px;
+    padding-left:4px ;
+    padding-right: 4px;
     
 }
 aside .queueSongs .songItems .queueSongCount{
@@ -463,6 +467,7 @@ aside .queueSongs .songItems .queueSongImage > img{
 aside .queueSongs .songItems .queueSongDetails{
     /* border: 1px solid cornsilk; */
     padding-left: 5px;
+    cursor: pointer;
 }
 
 aside .queueSongs .songItems .queueSongHeart{
@@ -470,4 +475,114 @@ aside .queueSongs .songItems .queueSongHeart{
     justify-self: end;
     color: gainsboro;
 
+}
+
+.masterPlay{
+    /* position: fixed; */
+    width: 100%;
+    height: 10%;
+    /* border: 1px solid white; */
+    /* bottom: 0px; */
+    background-color: #020248;
+    /* z-index: 4; */
+
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+
+}
+
+.masterPlay .wave{
+    width: 30px;
+    height: 30px;
+    /* border: 1px solid white; */
+    margin-right: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.masterPlay .wave .waves{
+    width: 3px;
+    height: 10px;
+    margin-right: 3px;
+    background-color:aquamarine;
+    border-radius: 10px 10px 0px 0px;
+    animation:unset;
+}
+
+
+.masterPlay .wave .wave2{
+    height: 15px;
+    
+}
+.masterPlay .wave .wave3{
+    height: 10px;
+}
+
+ /* JAVASCRIPT CLASSES WHEN ACTIVE IS ADDED */
+
+.masterPlay .active1 .waves{ 
+    animation: waves 0.5s linear infinite;
+}
+.masterPlay .active1 .wave2{
+    
+    animation-delay: 0.3s;
+}
+.masterPlay .active1 .wave3{
+    
+    animation-delay: 0.6s;
+}
+
+@keyframes waves {
+    0%{
+        height: 10px;
+    }
+    50%{
+        height: 15px;
+    }
+    100%{
+        height: 10px;
+    }
+}
+
+.masterPlay > img{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+.masterPlay #title{
+    color: white;
+    width: 150px;
+    /* border: 1px solid white; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    margin-right: 10px;
+}
+
+.masterPlay .icon{
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid white; */
+    justify-content: space-between;
+    width: 80px;
+    margin-right: 10px;
+}
+.masterPlay .icon > i{
+    cursor: pointer;
+    outline: none;
+}
+.masterPlay .icon #playButton{
+    font-size: 2rem;
+}
+
+.masterPlay .seekMenu{
+    color: white;
+    width: 210px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-between;
 }
