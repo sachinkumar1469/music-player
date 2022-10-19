@@ -146,12 +146,13 @@ nextSong.addEventListener('click',()=>{    // Event listener for next button
 playButton.addEventListener('click',()=>{    // Event listener for play and pause button
     if( music.paused || music.currentTime<=0){
         music.play();
-        playButton.style.color="aquamarine";
+        playButton.className="bi bi-pause-fill";
         wave.classList.add("active1");
         changeMasterPlayCurrentSongDetails();
     } else {
         music.pause();
-        playButton.style.color="white";
+        // playButton.style.color="white";
+        playButton.className="bi bi-play-fill";
         wave.classList.remove("active1");
         
     }
@@ -185,7 +186,7 @@ queueSongClicked.forEach((e)=>{
         changeMasterPlayCurrentSongDetails();
         music.play();
         wave.classList.add("active1");
-        playButton.style.color="aquamarine";
+        playButton.className="bi bi-pause-fill";
     })
 })
 
