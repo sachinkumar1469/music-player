@@ -215,9 +215,6 @@ music.addEventListener("timeupdate",()=>{
 
 
 let seek = document.getElementById('seek');
-seek.addEventListener('click',()=>{
-    console.log(seek.value);
-})
 
 let seekBarLine = document.getElementById('seekBarLine');
 let seekBarDot = document.getElementById('seekBarDot');
@@ -226,7 +223,24 @@ music.addEventListener('timeupdate',()=>{
     let musicLength = music.duration;
     let currLength = music.currentTime;
     let currPercentage = parseInt(currLength/musicLength*100);
+    // seek.value=currPercentage;
     seekBarLine.style.width=`${currPercentage}%`;
     seekBarDot.style.left=`${currPercentage}%`;
 })
+
+
+seek.addEventListener('click',()=>{
+    console.log(seek.value);
+    let musicDuration = music.duration;
+    let currentTimeO = (musicDuration*seek.value)/100;
+    console.log(currentTimeO);
+    music.currentTime=currentTimeO;
+});
+seek.addEventListener('drop',()=>{
+    console.log(seek.value);
+    let musicDuration = music.duration;
+    let currentTimeO = (musicDuration*seek.value)/100;
+    console.log(currentTimeO);
+    music.currentTime=currentTimeO;
+});
 

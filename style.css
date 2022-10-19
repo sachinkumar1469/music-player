@@ -582,7 +582,7 @@ aside .queueSongs .songItems .queueSongHeart{
 .masterPlay .seekMenu{
     color: white;
     width: 410px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -595,7 +595,7 @@ aside .queueSongs .songItems .queueSongHeart{
 }
 .masterPlay .seekMenu #seekBar{
     width: 80%;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     padding: 4px 5% 4px 5%;
     display: flex;
     align-items: center;
@@ -633,11 +633,71 @@ aside .queueSongs .songItems .queueSongHeart{
     border-radius: 50%;
     background-color: cyan;
     border: 2px solid cyan;
-    
-
 }
 
 .masterPlay .seekMenu #seekBar #backgroundBarLine #seekBarDot::before{
+    content: '';
+    position: absolute;
+    left:-6.5px;
+    top: -7px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid cyan;
+}
+
+.masterPlay .volumeSeek{
+    color: white;
+    width: 180px;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 13%;
+    
+}
+.masterPlay .volumeSeek  .bi{
+    font-size: 2rem;
+}
+
+.masterPlay .volumeSeek #seekBarVolume{
+    width: 80%;
+    /* border: 1px solid yellow; */
+    padding: 4px 5% 4px 5%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.masterPlay .volumeSeek #seekBarVolume #seekVolume{
+    width: 100%;
+    opacity: -1;
+    z-index: 5;
+}
+.masterPlay .volumeSeek #seekBarVolume #backgroundBarLineVolume{
+    position: absolute;
+    height: 4px;
+    width: 87%;
+    background: rgb(105, 105, 170,0.4);
+
+}
+.masterPlay .volumeSeek #seekBarVolume #backgroundBarLineVolume #seekBarLineVolume{
+    position: relative;
+    border: 2px solid cyan;
+    
+    width: 0%;
+    
+}
+.masterPlay .volumeSeek #seekBarVolume #backgroundBarLineVolume #seekBarDotVolume{
+    position: relative;
+    left: 0%;
+    top: -4.5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: cyan;
+    border: 2px solid cyan;
+}
+.masterPlay .volumeSeek #seekBarVolume #backgroundBarLineVolume #seekBarDotVolume::before{
     content: '';
     position: absolute;
     left:-6.5px;
