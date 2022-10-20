@@ -324,7 +324,7 @@ section > main::-webkit-scrollbar{
 #popularArtists{
     width: 100%;
     height: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-top: 40px;
     color: white;
 }
@@ -335,12 +335,12 @@ section > main::-webkit-scrollbar{
 #artistWrapper{
     display: flex;
     width: 100%;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     justify-content: space-between;
 }
 .artist{
     width: 17%;
-    border: 1px solid brown;
+    /* border: 1px solid brown; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -357,62 +357,116 @@ section > main::-webkit-scrollbar{
 .artist > h3{
     margin-top: 5px;
     font-size: 0.9rem;
+    text-align: center;
+    /* background-color: cyan; */
+    width: 100%;
 }
 
 #stationsWrapper{
     width: 100%;
-    height: auto;
-    border: 2px solid red;
+    height: 100px;
+    /* border: 2px solid red; */
     display: flex;
     margin-top: 20px;
     align-items: center;
     background-color: #020248;
+    
 }
 #station{
     width: 16%;
     height: 100%;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #station > img{
-    width: 100%;
+    width: 80px;
 }
 #songTypes{
     width: 84%;
     height: 100%;
-    border: 1px solid yellow;
+    /* border: 1px solid rgb(0, 248, 149); */
     display: flex;
     justify-content: space-between;
     padding-right: 2%;
     
-}
-.songType{
-    width: 13%;
-    border: 1px solid brown;
-    position: relative;
-}
-.songType > h4{
-    position: absolute;
-    color: #ffffffd1;
-    top: 34px;
-    left: 20px;
-    cursor: pointer;
-}
-.songType > a{
-    width: 100%;
-    border: 1px solid greenyellow;
-    text-decoration: none;
     
 }
-
-.songType > a > img{
-    width: 100%;
-    border-radius:50% ;
-    opacity: 0.5;
+.songType{
+    width: 16%;
+    padding: 1%;
+    /* background-color: white; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.songType > a{
+    display: block;
+    width: 100%;
+    /* border: 1px solid red; */
+    height: 80%;  
+    text-decoration: none;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.songType > a::before{
+    /* background: url("./images/station Logo/retro.jpg"); */
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("./images/station Logo/love.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(0.5px);
+}
+.songType > a::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    background-color: #80808066;
+    z-index: 2;
+}
+.songType > a > h4{
+    font-weight: 900;
+    z-index: 3;
+    
+}
+#songType1::before{
+    background-image: url("./images/station Logo/retro.jpg");
+}
+#songType2::before{
+    background-image: url("./images/station Logo/chill.jpg");
+}
+#songType3::before{
+    background-image: url("./images/station Logo/workout.jpg");
+}
+#songType4::before{
+    background-image: url("./images/station Logo/rock.png.jpg");
+}
+#songType5::before{
+    background-image: url("./images/station Logo/pop.jpg");
+}
+
 #typesOfMusic{
     width: 100%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height: 160px;
     margin-top: 20px;
     display: flex;
@@ -422,7 +476,7 @@ section > main::-webkit-scrollbar{
 .typesCard{
     width: 32%;
     height: 100%;
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
 }
 .typesCard > a{
     display: block;
@@ -430,7 +484,7 @@ section > main::-webkit-scrollbar{
     color: white;
     width: 100%;
     height: 100%;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     position: relative;
     /* overflow: hidden; */
     background-size: cover;
@@ -597,6 +651,7 @@ aside .queueSongs .songItems .queueSongHeart{
     }
     main > #latestRelase{
         height: 7.5rem;
+        margin-top: 6%;
     }
     main > #latestRelase > h3{
         font-size: 0.9rem;
@@ -605,19 +660,75 @@ aside .queueSongs .songItems .queueSongHeart{
     main > #latestRelase #LRSongsContainer{
         height: 80%;
     }
+    #LRSongsContainer .latestRelaseSongs{
+         grid-template-columns: 1fr 2.5fr 0.5fr ;
+    }
+
     #LRSongsContainer .latestRelaseSongs > img{
         height: 100%;
     }
     #LRSongsContainer .latestRelaseSongs .songDetails > h3{
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         
     }
     #LRSongsContainer .latestRelaseSongs .songDetails > h4{
+        font-size: 0.5rem;
+    }
+    .dotMenu > h4{
+        font-size: 0.5rem;
+        margin-top: 151%;
+        /* background-color: yellowgreen; */
+    }
+    .dotItems{
+        border: 1.7px solid white;
+        background-color: white;
+    }
+    #popularArtists{
+        margin-top: 6%;
+    }
+    #popularArtists > h3{
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+    #popularArtists .artist > h3{
         font-size: 0.6rem;
     }
+
+    #stationsWrapper{
+        height: 70px;
+    }
+    #station{
+        width: 16%;
+        height: 100%;
+        /* border: 1px solid yellow; */
+        padding: 0.4%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #station > img{
+        width: 100%;
+    }
+    .songType > a > h4{
+        font-size: 0.5rem;
+        font-weight: 900;
+        z-index: 3;
+        
+    }
+    #typesOfMusic{
+        height: 100px;
+    }
+    .typesCard > a > h4{
+        
+        font-size: 0.9rem;
+        
+        
+    }
+    
     aside{
         display: none;
     }
+    
 }
 
 .masterPlay{
