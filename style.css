@@ -78,7 +78,7 @@ nav{       /*  target navbar to add styles to navigation bar */
     /* Navigation Bar Styles end here...................................... */
 
     /* Media queries for nav bar to make it responsive */
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 690px) {
 
     #navLeft{
         width: 50%;
@@ -586,7 +586,7 @@ section > aside::-webkit-scrollbar{
     text-align: right;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 690px) {
     section{
         padding: 0px 5%;
         /* border: 2px solid yellowgreen; */
@@ -733,7 +733,7 @@ aside .queueSongs .songItems .queueSongHeart{
 
 /* media queries for aside 'queue' */
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 690px) {
     section > aside{
         /* display: none; */
         display: inline-block;
@@ -998,7 +998,7 @@ aside .queueSongs .songItems .queueSongHeart{
     border: 2px solid cyan;
 }
 
-@media screen and (max-width:390px) {
+@media screen and (max-width:690px) {
     .masterPlay{
         padding-left: 3px;
         padding-right: 3px;
