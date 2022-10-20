@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="singerProfile.css">
     <script src="https://kit.fontawesome.com/12a62b48d4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Montserrat:wght@300;400&family=Noto+Serif+Gujarati:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Montserrat:wght@300;400&family=Noto+Serif+Gujarati:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/12a62b48d4.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav>
@@ -24,12 +26,22 @@
         </div>
         <div id="navRight">
             <div id="inputBox">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" name="" id="" placeholder="Search">
-                <i class="fa-solid fa-microphone"></i>
+                <i class="fa-solid fa-magnifying-glass" id="searchGlass"></i>
+                <a id="mediaSearch" href="#mediaSearchBar"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <input type="text" name="" id="searchInput" placeholder="Search">           
+                <i class="fa-solid fa-microphone" id="microPhone"></i>
             </div>
             <i class="fa-sharp fa-solid fa-bell"></i>
             <i class="fa-sharp fa-solid fa-user"></i>
+        </div>
+
+         <div id="mediaSearchBar">  <!-- This div is used to in @media queries to make navbar responsive -->
+            <div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="" id="" placeholder="Search">
+                <i class="fa-solid fa-microphone" id=""></i>
+            </div>
+            <a href="#"><i class="bi bi-x-lg"></i></a>
         </div>
     </nav>
     <section id="content">
@@ -105,6 +117,7 @@
                         </ul>                                            
                     </div>
                 </div> 
+                <a href="#" id="queueCross" ><i class="bi bi-x" ></i></a>
             </div>
             <div class="queueSongs">
                 <li class="songItems">
@@ -167,37 +180,53 @@
                     <span class="queueSongDetails">Alone Pt. II</span>
                     <span class="queueSongHeart"><i class="fa-regular fa-heart"></i></span>
                 </li>
-                <li class="songItems">
-                    <span class="queueSongCount">11</span>
-                    <span class="queueSongImage"><img src="./images/queueSongsLogo/allbymyself.png" alt=""></span>
-                    <span class="queueSongDetails">All By Myself</span>
-                    <span class="queueSongHeart"><i class="fa-regular fa-heart"></i></span>
-                </li>
-                <li class="songItems">
-                    <span class="queueSongCount">12</span>
-                    <span class="queueSongImage"><img src="./images/queueSongsLogo/wishyouwell.png" alt=""></span>
-                    <span class="queueSongDetails">Wish You Well</span>
-                    <span class="queueSongHeart"><i class="fa-regular fa-heart"></i></span>
-                </li>
-                <li class="songItems">
-                    <span class="queueSongCount">13</span>
-                    <span class="queueSongImage"><img src="./images/queueSongsLogo/wokeupinlove.png" alt=""></span>
-                    <span class="queueSongDetails">Woke Up in Love</span>
-                    <span class="queueSongHeart"><i class="fa-regular fa-heart"></i></span>
-                </li>
-                <li class="songItems">
-                    <span class="queueSongCount">14</span>
-                    <span class="queueSongImage"><img src="./images/queueSongsLogo/dancingfeet.jpg" alt=""></span>
-                    <span class="queueSongDetails">Dancing Feet</span>
-                    <span class="queueSongHeart"><i class="fa-regular fa-heart"></i></span>
-                </li>
+                
                 
             </div>
             
         </aside>
+        <div class="masterPlay">
+            <div class="wave" id="wave">
+                <div class="wave1 waves "></div>
+                <div class="wave2 waves "></div>
+                <div class="wave3 waves "></div>
+            </div>
+            <a href="#queueAside"><img src="./images/songs_logo/alanWalker.png" alt="" id="songLogo"></a>
+            <div id="title">
+                <h4>Faded</h4>
+                <div id="subtitle">
+                    <h6 style="color: gainsboro;">Subtitle</h6>
+                </div>
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-backward" id="prevSong"></i>
+                <i class="bi bi-play-fill" id="playButton"></i>
+                <!-- <i class="fa-sharp fa-solid fa-play" id="playButton"></i> -->
+                <i class="fa-solid fa-forward" id="nextSong"></i>
+            </div>
+            <div class="seekMenu">
+                <span id="startTime">00:00</span>
+                <div id="seekBar">
+                    <input type="range" name="" id="seek" min="0" max="100">
+                    <div id="backgroundBarLine"><div id="seekBarLine"></div><div id="seekBarDot"></div></div>
+                    
+
+                </div>
+                <span id="endTime">2:46</span>
+            </div>
+            <div class="volumeSeek">
+                <i class="bi bi-volume-down-fill"></i>
+                <div id="seekBarVolume">
+                    <input type="range" name="" id="seekVolume" min="0" max="100">
+                    <div id="backgroundBarLineVolume"><div id="seekBarLineVolume"></div><div id="seekBarDotVolume"></div></div>            
+                </div>
+                
+            </div>
+        </div>
     </section>
     <footer>
 
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>
