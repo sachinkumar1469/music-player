@@ -21,12 +21,22 @@
         </div>
         <div id="navRight">
             <div id="inputBox">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" name="" id="" placeholder="Search">
-                <i class="fa-solid fa-microphone"></i>
+                <i class="fa-solid fa-magnifying-glass" id="searchGlass"></i>
+                <a id="mediaSearch" href="#mediaSearchBar"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <input type="text" name="" id="searchInput" placeholder="Search">           
+                <i class="fa-solid fa-microphone" id="microPhone"></i>
             </div>
             <i class="fa-sharp fa-solid fa-bell"></i>
             <i class="fa-sharp fa-solid fa-user"></i>
+        </div>
+
+         <div id="mediaSearchBar">  <!-- This div is used to in @media queries to make navbar responsive -->
+            <div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="" id="" placeholder="Search">
+                <i class="fa-solid fa-microphone" id=""></i>
+            </div>
+            <a href="#"><i class="bi bi-x-lg"></i></a>
         </div>
     </nav>
     <section id="content">
