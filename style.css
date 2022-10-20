@@ -163,7 +163,7 @@ nav{       /*  target navbar to add styles to navigation bar */
 section{
     width: 100%;
     height: 84vh;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     padding: 0px 8%;
     flex-wrap: wrap;
@@ -173,7 +173,7 @@ section{
 section > main{
     width: 75%;
     height: 90%;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     overflow:auto;
     padding-top: 2%;
     padding-left: 2%;
@@ -526,7 +526,7 @@ section > main::-webkit-scrollbar{
 section > aside{
     width: 25%;
     height: 90%;
-    border: 1px solid yellowgreen;
+    /* border: 1px solid yellowgreen; */
     overflow: auto;
     padding-top: 2%;
     padding-left: 1%;
@@ -534,6 +534,9 @@ section > aside{
 }
 section > aside::-webkit-scrollbar{
     width: 0px;
+}
+#queueCross{
+    display: none;
 }
 #queueAside{
     color:white;
@@ -583,65 +586,10 @@ section > aside::-webkit-scrollbar{
     text-align: right;
 }
 
-aside .queueSongs{
-    width: 100%;
-    height: 83%;
-    /* border: 1px solid yellow; */
-    margin-top: 45px;
-    overflow: auto;
-}
-aside .queueSongs::-webkit-scrollbar{
-    width: 0px;
-}
-aside .queueSongs .songItems{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 2fr 4fr 1fr;
-    align-items: center;
-    /* border: 1px solid whitesmoke; */
-    margin-bottom: 8px;
-    padding-left:4px ;
-    padding-right: 4px;
-    
-}
-aside .queueSongs .songItems .queueSongCount{
-    /* border: 1px solid green; */
-    color: gainsboro;
-    font-size: 0.85rem;
-}
-aside .queueSongs .songItems .queueSongImage{
-    /* border: 1px solid salmon; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: white; */
-    
-}
-aside .queueSongs .songItems .queueSongImage > img{
-    width: 75%;
-    box-shadow: 0px 0px 10px gray;
-}
-
-aside .queueSongs .songItems .queueSongDetails{
-    /* border: 1px solid cornsilk; */
-    padding-left: 5px;
-    cursor: pointer;
-}
-
-aside .queueSongs .songItems .queueSongHeart{
-    /* border: 1px solid burlywood; */
-    justify-self: end;
-    color: gainsboro;
-
-}
-
-
-/* media queries for aside 'queue' */
-
 @media screen and (max-width: 390px) {
     section{
         padding: 0px 5%;
-        border: 2px solid yellowgreen;
+        /* border: 2px solid yellowgreen; */
     }
     section > main{
         width: 100%;
@@ -725,10 +673,95 @@ aside .queueSongs .songItems .queueSongHeart{
         
     }
     
-    aside{
+    
+    
+}
+
+
+aside .queueSongs{
+    width: 100%;
+    height: 83%;
+    /* border: 1px solid yellow; */
+    margin-top: 45px;
+    overflow: auto;
+}
+aside .queueSongs::-webkit-scrollbar{
+    width: 0px;
+}
+aside .queueSongs .songItems{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr 1fr;
+    align-items: center;
+    /* border: 1px solid whitesmoke; */
+    margin-bottom: 8px;
+    padding-left:4px ;
+    padding-right: 4px;
+    
+}
+aside .queueSongs .songItems .queueSongCount{
+    /* border: 1px solid green; */
+    color: gainsboro;
+    font-size: 0.85rem;
+}
+aside .queueSongs .songItems .queueSongImage{
+    /* border: 1px solid salmon; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: white; */
+    
+}
+aside .queueSongs .songItems .queueSongImage > img{
+    width: 75%;
+    box-shadow: 0px 0px 10px gray;
+}
+
+aside .queueSongs .songItems .queueSongDetails{
+    /* border: 1px solid cornsilk; */
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+aside .queueSongs .songItems .queueSongHeart{
+    /* border: 1px solid burlywood; */
+    justify-self: end;
+    color: gainsboro;
+
+}
+
+
+/* media queries for aside 'queue' */
+
+@media screen and (max-width: 390px) {
+    section > aside{
+        /* display: none; */
+        display: inline-block;
+        width: 90%;
+        height: 0%;
+        bottom: 9%;
+        right: 19px;
+        /* border: 2px solid white; */
+        position: absolute;
+        overflow: hidden;
+        transition: all 1s ease;
+        background-color: #020248;
+        z-index: -1;
+    }
+    #queueDropDown{
         display: none;
     }
-    
+    #queueCross{
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.5rem;
+    }
+    #queueAside:target{
+        height: 90%;
+        z-index: 10;
+    }
+
 }
 
 .masterPlay{
@@ -800,10 +833,13 @@ aside .queueSongs .songItems .queueSongHeart{
     }
 }
 
-.masterPlay > img{
+.masterPlay > a{
     width: 35px;
     height: 35px;
     margin-right: 10px;
+}
+.masterPlay > a > img{
+    width: 100%;
 }
 .masterPlay #title{
     color: white;
@@ -907,7 +943,7 @@ aside .queueSongs .songItems .queueSongHeart{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 13%;
+    margin-left: 2%;
     
 }
 .masterPlay .volumeSeek  .bi{
@@ -960,4 +996,38 @@ aside .queueSongs .songItems .queueSongHeart{
     height: 10px;
     border-radius: 50%;
     border: 2px solid cyan;
+}
+
+@media screen and (max-width:390px) {
+    .masterPlay{
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    .masterPlay #title{
+        display: none;
+    }
+    .masterPlay .seekMenu{
+        /* background-color: tomato;
+        width: 310px; */
+    }
+    .seekMenu #startTime{
+        display: none;
+    }
+    .seekMenu #endTime{
+        display: none;
+    }
+    .masterPlay .seekMenu #seekBar{
+        width: 100%;
+    }
+    .masterPlay .volumeSeek{
+        width: auto;
+    }
+    .masterPlay .volumeSeek #seekBarVolume{
+        display: none;
+    }
+    .masterPlay > a{
+        background: white;
+        width:91px ;
+        display: flex;
+    }
 }
