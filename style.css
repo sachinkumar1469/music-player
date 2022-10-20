@@ -15,7 +15,7 @@ nav{       /*  target navbar to add styles to navigation bar */
     color: white;
     padding: 1% 7%;
     font-size: 1.4rem;
-    /* border: 1px solid red; */
+    
     position: relative;
 }
     /* Left Side of navigation bar which includes logo and favourite button */
@@ -24,25 +24,23 @@ nav{       /*  target navbar to add styles to navigation bar */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid white; */
+    
 }
     /* Style logo image and name */
 #websiteLogo{
     width: 70%;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    
     font-size: 2rem;
-    /* border: 1px solid yellow; */
+    
 }
 #websiteLogo > img{
     width: 70px;
-    /* border: 1px solid yellow; */
     margin-right: 4px;
 }
 #navLeft > h3{
     font-size: 1.2rem;
-    /* border: 1px solid green; */
 }
 
     /* Div to target the right side of navigation bar which inclued search box and profile etc. */
@@ -51,7 +49,6 @@ nav{       /*  target navbar to add styles to navigation bar */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* border: 1px solid yellow; */
 }
 
     /* input box styles */
@@ -121,7 +118,6 @@ nav{       /*  target navbar to add styles to navigation bar */
         position: absolute;
         width: 0%;
         height: 100%;
-        /* border: 1px solid white; */
         top: 0%;
         right:41%;
         background-color:#01012e;
@@ -134,7 +130,6 @@ nav{       /*  target navbar to add styles to navigation bar */
     }
     #mediaSearchBar > div{
         width: 60%;
-        /* border: 1px solid yellow; */
         background-color: #14146dd1;
         display: flex;
         justify-content: space-between;
@@ -147,7 +142,6 @@ nav{       /*  target navbar to add styles to navigation bar */
         width: 75%;
         height: 90%;
         background-color: transparent;
-        /* color: white; */
         border: none;
         outline: none;
         font-size: 1rem;
@@ -164,6 +158,8 @@ nav{       /*  target navbar to add styles to navigation bar */
 
 }       /* Media queries for Navigation Bar ends here */
 
+
+    /* Style for main section starts from here.................. */
 section{
     width: 100%;
     height: 84vh;
@@ -177,7 +173,7 @@ section{
 section > main{
     width: 75%;
     height: 90%;
-    /* border: 1px solid yellow; */
+    border: 1px solid yellow;
     overflow:auto;
     padding-top: 2%;
     padding-left: 2%;
@@ -328,7 +324,7 @@ section > main::-webkit-scrollbar{
 #popularArtists{
     width: 100%;
     height: auto;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     margin-top: 40px;
     color: white;
 }
@@ -339,12 +335,12 @@ section > main::-webkit-scrollbar{
 #artistWrapper{
     display: flex;
     width: 100%;
-    /* border: 1px solid yellow; */
+    border: 1px solid yellow;
     justify-content: space-between;
 }
 .artist{
     width: 17%;
-    /* border: 1px solid brown; */
+    border: 1px solid brown;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -366,7 +362,7 @@ section > main::-webkit-scrollbar{
 #stationsWrapper{
     width: 100%;
     height: auto;
-    /* border: 2px solid red; */
+    border: 2px solid red;
     display: flex;
     margin-top: 20px;
     align-items: center;
@@ -375,7 +371,7 @@ section > main::-webkit-scrollbar{
 #station{
     width: 16%;
     height: 100%;
-    /* border: 1px solid yellow; */
+    border: 1px solid yellow;
     padding: 2%;
 }
 #station > img{
@@ -384,7 +380,7 @@ section > main::-webkit-scrollbar{
 #songTypes{
     width: 84%;
     height: 100%;
-    /* border: 1px solid yellow; */
+    border: 1px solid yellow;
     display: flex;
     justify-content: space-between;
     padding-right: 2%;
@@ -392,7 +388,7 @@ section > main::-webkit-scrollbar{
 }
 .songType{
     width: 13%;
-    /* border: 1px solid brown; */
+    border: 1px solid brown;
     position: relative;
 }
 .songType > h4{
@@ -404,7 +400,7 @@ section > main::-webkit-scrollbar{
 }
 .songType > a{
     width: 100%;
-    /* border: 1px solid greenyellow; */
+    border: 1px solid greenyellow;
     text-decoration: none;
     
 }
@@ -416,7 +412,7 @@ section > main::-webkit-scrollbar{
 }
 #typesOfMusic{
     width: 100%;
-    /* border: 2px solid red; */
+    border: 2px solid red;
     height: 160px;
     margin-top: 20px;
     display: flex;
@@ -426,7 +422,7 @@ section > main::-webkit-scrollbar{
 .typesCard{
     width: 32%;
     height: 100%;
-    /* border: 2px solid yellow; */
+    border: 2px solid yellow;
 }
 .typesCard > a{
     display: block;
@@ -434,7 +430,7 @@ section > main::-webkit-scrollbar{
     color: white;
     width: 100%;
     height: 100%;
-    /* border: 2px solid green; */
+    border: 2px solid green;
     position: relative;
     /* overflow: hidden; */
     background-size: cover;
@@ -470,10 +466,13 @@ section > main::-webkit-scrollbar{
     
 }
 
+
+
+
 section > aside{
     width: 25%;
     height: 90%;
-    /* border: 1px solid yellowgreen; */
+    border: 1px solid yellowgreen;
     overflow: auto;
     padding-top: 2%;
     padding-left: 1%;
@@ -580,6 +579,45 @@ aside .queueSongs .songItems .queueSongHeart{
     justify-self: end;
     color: gainsboro;
 
+}
+
+
+/* media queries for aside 'queue' */
+
+@media screen and (max-width: 390px) {
+    section{
+        padding: 0px 5%;
+        border: 2px solid yellowgreen;
+    }
+    section > main{
+        width: 100%;
+    }
+    section > main > #card{
+        height: 6rem;
+    }
+    main > #latestRelase{
+        height: 7.5rem;
+    }
+    main > #latestRelase > h3{
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+    main > #latestRelase #LRSongsContainer{
+        height: 80%;
+    }
+    #LRSongsContainer .latestRelaseSongs > img{
+        height: 100%;
+    }
+    #LRSongsContainer .latestRelaseSongs .songDetails > h3{
+        font-size: 0.8rem;
+        
+    }
+    #LRSongsContainer .latestRelaseSongs .songDetails > h4{
+        font-size: 0.6rem;
+    }
+    aside{
+        display: none;
+    }
 }
 
 .masterPlay{
